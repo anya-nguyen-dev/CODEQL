@@ -5,7 +5,7 @@
 
 // This program prints the size of a specified file in bytes
 int main(int argc, char** argv) {
-char cmd[256] = "wc -c < ";
+char cmd[BUFSIZE] = "wc -c < ";
 
   printf(cmd, argv[1]);
 system(cmd);
