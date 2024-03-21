@@ -8,7 +8,7 @@
 int main(int argc, char** argv) {
 char cmd[256] = "wc -c < ";
 
-  sprintf(cmd, argv[1]);
+  printf(cmd, argv[1]);
 system(cmd);
   
 }
