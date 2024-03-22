@@ -1,21 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
-#define BUFFSIZE 256
 
-int read_file(const char *filename) {
-FILE* ptr = fopen(filename, "r");
+#define BUFSIZE 256
 
-if (ptr == NULL) {
-printf("File cannot be opened.\n");
-return(-1);
+// This program prints the size of a specified file in bytes
+int main(int argc, char** argv) {
+char cmd[BUFSIZE] = "wc -c < ";
+
+  printf(cmd, argv[1]);
+system(cmd);
+  
 }
 
-char buff[BUFFSIZE];
-
-while (fgets(buff, BUFFSIZE, ptr) != NULL) {
-printf("%s", buff);
-}
-
-return 0; 
-}
